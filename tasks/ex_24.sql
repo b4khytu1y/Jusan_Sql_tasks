@@ -1,4 +1,7 @@
 # Напишите запрос, который показывает топ-5 самых покупаемых треков за все время. На выходе в первой колонке должно быть название трека, во второй в отсортированном по убыванию порядке количество экземпляров трека.
+$ ls
+ex_24.sql
+$ cat ex_24.sql
 SELECT t.name AS track_name, SUM(il.quantity) AS total_quantity
 FROM invoice_line il
 JOIN track t ON il.track_id = t.track_id

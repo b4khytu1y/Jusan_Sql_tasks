@@ -1,4 +1,7 @@
 # Напишите запрос, который показывает треки 2013 года, отсортированные по количеству проданных экземпляров. На выходе в первой колонке должно быть название трека, во второй в отсортированном по убыванию порядку количество экземпляров трека.
+$ ls
+ex_23.sql
+$ cat ex_23.sql
 SELECT t.name AS track_name, SUM(il.quantity) AS total_quantity
 FROM invoice_line il
 JOIN invoice i ON il.invoice_id = i.invoice_id

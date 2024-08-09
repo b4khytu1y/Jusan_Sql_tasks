@@ -1,4 +1,7 @@
 # Какой работник добился наибольшего объема продаж в 2010 году? На выходе в первой колонке должна быть сумма продаж, во второй имя и фамилия продавца.
+$ ls
+ex_19.sql
+$ cat ex_19.sql
 SELECT SUM(i.total) AS total_sales, CONCAT(e.first_name, ' ', e.last_name) AS employee_name
 FROM invoice i
 JOIN customer c ON i.customer_id = c.customer_id
